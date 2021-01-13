@@ -5,7 +5,7 @@ module Authenticate
     @current_user = User.where(authentication_token: auth_token).first
   end
 
-  def authenticate_with_token
+  def authenticate_with_token!
     return if current_user
     json_response "Un-Authenticated", false ,{}, :unauthorized
   end

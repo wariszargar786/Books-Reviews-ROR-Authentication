@@ -10,4 +10,5 @@ class User < ApplicationRecord
     return token
     # update_attribute authentication_token: token
   end
+  has_many :blogs
 end
